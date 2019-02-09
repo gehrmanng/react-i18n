@@ -9,13 +9,13 @@ Install via npm:
 Installing via npm:
 
 ```sh
-npm install --save react-i18n
+npm install --save @gehrmanng/react-i18n
 ```
 
 ES6:
 
 ```js
-import { I18nProvider } from "react-i18n";
+import { I18nProvider } from "@gehrmanng/react-i18n";
 ```
 
 ### Examples
@@ -23,7 +23,7 @@ import { I18nProvider } from "react-i18n";
 Setup translations and the default / fallback language:
 
 ```js
-import { I18nProvider } from "react-i18n";
+import { I18nProvider } from "@gehrmanng/react-i18n";
 
 const translations = {
   en: {
@@ -48,7 +48,7 @@ Use the translations:
 
 ```js
 // Local component and context imports
-import I18n from "react-i18n";
+import I18n from "@gehrmanng/react-i18n";
 
 function ExampleApp() {
   return (
@@ -62,7 +62,7 @@ function ExampleApp() {
 Setting the langauge:
 
 ```js
-import { I18nContext, TYPES } from "react-i18n";
+import { I18nContext, TYPES } from "@gehrmanng/react-i18n";
 
 function ExampleApp() {
   // Get the dispatch method from the i18n context
