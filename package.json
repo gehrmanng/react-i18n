@@ -1,11 +1,22 @@
 {
-  "name": "react-i18n",
+  "name": "@gehrmanng/react-i18n",
   "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gehrmanng/react-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gehrmanng/react-i18n/issues"
+  },
+  "homepage": "https://github.com/gehrmanng/react-i18n#readme",
   "scripts": {
     "start": "react-scripts start",
     "build-examples": "react-scripts build",
