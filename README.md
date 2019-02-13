@@ -31,7 +31,8 @@ const translations = {
   en: {
     label: {
       example: {
-        text: "This is a simple example text"
+        text: "This is a simple example text",
+        currentDate: "The current date is: _date_"
       }
     }
   }
@@ -77,6 +78,21 @@ function ExampleApp() {
   return (
     <div>
       <I18n i18nKey="label.example.text" />
+    </div>
+  );
+}
+```
+
+Use the I18n component with variable text parts (same for HOC and hook):
+
+```js
+// Local component and context imports
+import I18n from "@gehrmanng/react-i18n";
+
+function ExampleApp() {
+  return (
+    <div>
+      <I18n i18nKey="label.example.currentDate" vars={{ currentDate: new Date() }} />
     </div>
   );
 }
