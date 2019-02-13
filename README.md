@@ -1,5 +1,7 @@
 # react-i18n
 
+react-i18n provides functionalities for text translation and localization. Unlike many other i18n libraries with react-i18n you can store your default texts within the translation definitions. This way you don't have to duplicate default texts for many components.
+
 ## Installation
 
 Install via npm:
@@ -44,21 +46,6 @@ render(
 );
 ```
 
-Use the translations:
-
-```js
-// Local component and context imports
-import I18n from "@gehrmanng/react-i18n";
-
-function ExampleApp() {
-  return (
-    <div>
-      <I18n i18nKey="label.example.text" />
-    </div>
-  );
-}
-```
-
 Setting the langauge:
 
 ```js
@@ -79,3 +66,53 @@ function ExampleApp() {
   );
 }
 ```
+
+Use the I18n component:
+
+```js
+// Local component and context imports
+import I18n from "@gehrmanng/react-i18n";
+
+function ExampleApp() {
+  return (
+    <div>
+      <I18n i18nKey="label.example.text" />
+    </div>
+  );
+}
+```
+
+Use the i18n HOC:
+
+```js
+import { withI18n } from "@gehrmanng/react-i18n";
+
+class ExampleComponent extends PureComponent {
+  static propTypes = {
+    i18n: PropTypes.object.isRequired
+  };
+
+  render() {
+    const { i18n } = this.props;
+    const text = i18n.translate("label.example.text");
+    return <span>{text}</span>;
+  }
+}
+
+export default withI18n(ExampleComponent);
+```
+
+Use the i18n hook:
+
+```js
+import { useI18n } from "@gehrmanng/react-i18n";
+
+function ExampleApp() {
+  const text = useI18n("label.example.text");
+  return <div>{text}</div>;
+}
+```
+
+### LICENSE
+
+The project is licensed under the terms of [MIT license](https://github.com/gehrmanng/react-i18n/blob/master/LICENSE)
