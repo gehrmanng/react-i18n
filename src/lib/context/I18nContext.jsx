@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 // Context creation
 const I18nContext = React.createContext();
 
+// Available context action types
 const TYPES = {
   SET_TRANSLATIONS: 'SET_TRANSLATIONS',
   SET_DEFAULT_LANG: 'SET_DEFAULT_LANG',
@@ -55,7 +56,7 @@ I18nProvider.propTypes = {
 // Create the i18n context consumer
 const I18nConsumer = I18nContext.Consumer;
 
-// Export context, provider and consumer
+// Export context, provider, consumer, action types, hook and HOC
 export {
   I18nContext, I18nProvider, I18nConsumer, TYPES,
 };

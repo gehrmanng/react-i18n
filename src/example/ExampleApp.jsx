@@ -2,7 +2,8 @@
 import React, { useState, useContext } from 'react';
 
 // Local component and context imports
-import I18n, { I18nContext, TYPES } from '../lib';
+import I18n, { I18nContext, TYPES, useI18n } from '../lib';
+import ExampleComponent from './ExampleComponent';
 
 /**
  * Functional component to create an example application.
@@ -27,6 +28,8 @@ export default function ExampleApp() {
       <br />
       <I18n i18nKey="label.example.not.existing" />
       <br />
+      <ExampleComponent />
+      <br />
       <br />
       <button type="button" onClick={() => dispatch({ type: TYPES.SET_LANGUAGE, payload: 'en' })}>
         English
@@ -49,7 +52,7 @@ export default function ExampleApp() {
           setCounter(counter + 1);
         }}
       >
-        <I18n i18nKey="button.counter" />
+        {useI18n('button.counter')}
       </button>
     </div>
   );

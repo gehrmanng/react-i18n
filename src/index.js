@@ -15,6 +15,7 @@ const translations = {
         text: 'This is a simple example text',
         count: 'This is an example text with a counter: _counter_',
         default: 'Use default language',
+        usingHOC: 'This text is translated using a HOC',
       },
     },
     button: {
@@ -26,6 +27,7 @@ const translations = {
       example: {
         text: 'Dies ist ein einfacher Beispieltext',
         count: 'Dies ist ein Beispieltext mit einem Zähler: _counter_',
+        usingHOC: 'Dieser Text wurde durch ein HOC übersetzt',
       },
     },
     button: {
@@ -37,6 +39,7 @@ const translations = {
       example: {
         text: 'Dies ist ein einfacher Beispieltext (AT)',
         count: 'Dies ist ein Beispieltext mit einem Zähler: _counter_ (AT)',
+        usingHOC: 'Dieser Text wurde durch ein HOC übersetzt (AT)',
       },
     },
   },
