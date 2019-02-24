@@ -3,8 +3,13 @@
   "version": "0.3.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "i18n",
+    "translation",
+    "localization"
+  ],
+  "author": "Gerry Gehrmann",
   "license": "MIT",
   "files": [
     "dist"
@@ -50,5 +55,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "markdown-to-jsx": "^6.9.1"
+  }
 }

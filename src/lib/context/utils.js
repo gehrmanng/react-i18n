@@ -8,7 +8,7 @@
  * @param {string} language The current language
  * @param {object} translations All available translations
  * @param {object} [vars] Optional placeholder variables with their values
- * @returns {string} The translated text or the i18n key if no translation could be found
+ * @returns {jsx} The translated text or the i18n key if no translation could be found
  */
 export default function translate(i18nKey, defaultLanguage, language, translations, vars) {
   // Get all localized translations for the current and default language

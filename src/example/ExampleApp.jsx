@@ -33,6 +33,10 @@ export default function ExampleApp() {
       <br />
       <ExampleComponent />
       <br />
+      <I18n i18nKey="label.example.formatted" markdown />
+      <br />
+      <input placeholder={translate('label.example.placeholder')} />
+      <br />
       <br />
       <button type="button" onClick={() => dispatch({ type: TYPES.SET_LANGUAGE, payload: 'en' })}>
         English

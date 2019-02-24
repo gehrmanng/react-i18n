@@ -16,6 +16,8 @@ const translations = {
         count: 'This is an example text with a counter: _counter_',
         default: 'Use default language',
         usingHOC: 'This text is translated using a HOC',
+        formatted: 'This is a **formatted** _text_',
+        placeholder: 'Placeholder text',
       },
     },
     button: {

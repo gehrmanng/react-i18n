@@ -1,5 +1,6 @@
 // Library imports
 import React from 'react';
+import Markdown from 'markdown-to-jsx';
 
 // Local imports
 import { I18nConsumer } from './I18nContext';
@@ -20,7 +21,10 @@ export default function withI18n(WrappedComponent) {
         const mergedProps = {
           ...props,
           i18n: {
-            translate: (i18nKey, vars) => translate(i18nKey, defaultLanguage, language, translations, vars),
+            translate: (i18nKey, markdown, vars) => {
+              const translation = translate(i18nKey, defaultLanguage, language, translations, vars);
+              return markdown ? <Markdown>translation</Markdown> : translation;
+            },
           },
         };
         return <WrappedComponent {...mergedProps} />;

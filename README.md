@@ -2,11 +2,13 @@
 
 react-i18n provides functionalities for text translation and localization. Unlike many other i18n libraries with react-i18n you can store your default texts within the translation definitions. This way you don't have to duplicate default texts for many components.
 
+[![npm version](https://badge.fury.io/js/%40gehrmanng%2Freact-i18n.svg)](https://badge.fury.io/js/%40gehrmanng%2Freact-i18n) [![downloads](https://img.shields.io/npm/dm/%40gehrmanng%2Freact-i18n.svg)](https://npm-stat.com/charts.html?package=%40gehrmanng%2Freact-i18n.svg)
+
+## Dependencies
+
+react-i18n uses [markdown-to-jxs](https://probablyup.com/markdown-to-jsx/) for basic Markdown formatting.
+
 ## Installation
-
-Install via npm:
-
-### Node / NPM
 
 Installing via npm:
 
@@ -20,7 +22,7 @@ ES6:
 import { I18nProvider } from "@gehrmanng/react-i18n";
 ```
 
-### Examples
+## Examples
 
 Setup translations and the default / fallback language:
 
@@ -129,6 +131,38 @@ function ExampleApp() {
   return <div>{text}</div>;
 }
 ```
+
+Use Markdown formatting:
+
+[markdown-to-jxs](https://probablyup.com/markdown-to-jsx/) is used for basic Markdown formatting. Additional options as described in the markdown-to-jsx documentation are not yet supported.
+
+```js
+const translations = {
+  en: {
+    label: {
+      example: {
+        text: "This is a **formatted** example text",
+      }
+    }
+  }
+};
+...
+```
+
+```js
+import { useI18n } from "@gehrmanng/react-i18n";
+
+function ExampleApp() {
+  const translate = useI18n();
+  // The second parameter enables Markdown formatting
+  const text = translate("label.example.text", true);
+  return <div>{text}</div>;
+}
+```
+
+Result: This is a **formatted** example text
+
+The HOC takes the same parameter as well, the \<I18n> component takes a markdown attribute to enable formatting.
 
 ### LICENSE
 
