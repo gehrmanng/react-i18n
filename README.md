@@ -124,7 +124,8 @@ Use the i18n hook:
 import { useI18n } from "@gehrmanng/react-i18n";
 
 function ExampleApp() {
-  const text = useI18n("label.example.text");
+  const translate = useI18n();
+  const text = translate("label.example.text");
   return <div>{text}</div>;
 }
 ```

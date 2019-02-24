@@ -11,7 +11,8 @@ import useI18n from '../context/I18nHook';
  * @returns {string} The translated text or the given i18n key of no translation could be found.
  */
 function I18n({ i18nKey, vars }) {
-  return useI18n(i18nKey, vars);
+  const translate = useI18n();
+  return translate(i18nKey, vars);
 }
 
 // Set component property types

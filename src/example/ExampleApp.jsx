@@ -17,6 +17,9 @@ export default function ExampleApp() {
   // Get the dispatch method from the i18n context
   const { dispatch } = useContext(I18nContext);
 
+  // Get the translate function from hook
+  const translate = useI18n();
+
   // Create and return the markup
   return (
     <div>
@@ -52,7 +55,7 @@ export default function ExampleApp() {
           setCounter(counter + 1);
         }}
       >
-        {useI18n('button.counter')}
+        {translate('button.counter')}
       </button>
     </div>
   );
