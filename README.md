@@ -2,7 +2,7 @@
 
 react-i18n provides functionalities for text translation and localization. Unlike many other i18n libraries with react-i18n you can store your default texts within the translation definitions. This way you don't have to duplicate default texts for many components.
 
-[![npm version](https://badge.fury.io/js/%40gehrmanng%2Freact-i18n.svg)](https://badge.fury.io/js/%40gehrmanng%2Freact-i18n) [![downloads](https://img.shields.io/npm/dm/%40gehrmanng%2Freact-i18n.svg)](https://npm-stat.com/charts.html?package=%40gehrmanng%2Freact-i18n.svg)
+[![npm version](https://badge.fury.io/js/%40gehrmanng%2Freact-i18n.svg)](https://badge.fury.io/js/%40gehrmanng%2Freact-i18n) [![downloads](https://img.shields.io/npm/dm/%40gehrmanng%2Freact-i18n.svg)](https://npm-stat.com/charts.html?package=%40gehrmanng%2Freact-i18n) ![license](https://img.shields.io/npm/l/@gehrmanng/react-i18n.svg)
 
 ## Dependencies
 
